@@ -13,14 +13,15 @@ public class WeatherForecastController : ControllerBase
 
     private readonly ILogger<WeatherForecastController> _logger;
 
+    public WeatherForecastController()
+    {
+    }
+
     public WeatherForecastController(ILogger<WeatherForecastController> logger)
     {
         _logger = logger;
     }
-     public WeatherForecastController()
-    {
     
-    }
 
     [HttpGet("{id}")]
     public ActionResult<string> Get(int id){
